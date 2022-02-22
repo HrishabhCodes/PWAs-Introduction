@@ -1,24 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+// import React, { useState, useEffect } from "react";
+import React from "react";
+import video from "./videos/UnderwaterPhotoMusic_062314189.mp4";
 
 function App() {
+  // const [data, setData] = useState([]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const result = await fetch("http://orangevalleycaa.org/api/videos").then(
+  //       (response) => response.json()
+  //     );
+  //     setData(result);
+  //   };
+  //   fetchData();
+  // }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1> Art Videos</h1>
       </header>
+      <div>
+        <video controls height={200} src={video}></video>
+      </div>
+      {/* {data.map((video) => {
+        return (
+          <div key={video.id}>
+            <h2>{video.name}</h2>
+            <video controls height={200} src={video.video_url}></video>
+          </div>
+        );
+      })} */}
     </div>
   );
 }
